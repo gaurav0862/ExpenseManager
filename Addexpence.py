@@ -57,7 +57,7 @@ class expence:
         self.remarks.pack(side=TOP)
 
         Label(self.top, text="Category : ").pack(side=TOP, pady=10)
-        self.category = Combobox(self.top, values=("Automobile","Entertainment","Family","Insurance","Loan","Personal","Travel"))
+        self.category = Combobox(self.top, values=("Automobile","Entertainment","Family","Insurance","Loan","Personal","Travel",'Others'),state='readonly')
         self.category.pack(side=TOP, pady=10)
 
         Label(self.top, text="Transection Type : ").pack(side=TOP, pady=10)

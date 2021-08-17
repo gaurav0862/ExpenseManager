@@ -1,9 +1,9 @@
 from tkinter import *
 from tkinter import ttk
-from pandas import DataFrame
+import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from PIL import Image,ImageTk
 from tkinter.messagebox import *
 from tkinter.ttk import Combobox, Treeview
@@ -19,6 +19,7 @@ import AddIncome
 import viewincome
 import Viewexpence
 import Budget
+import graphs
 
 class demo:
 
@@ -66,6 +67,16 @@ class demo:
         self.menu_1.add_cascade(label="Budget", menu=self.Budget)
         self.Budget.add_command(label="Add Budget", command=lambda: Budget.add(email))
         self.Budget.add_command(label="View Budget", command=lambda: ViewBudget.view(email))
+
+        self.Graphs = Menu(self.menu_1, tearoff=0)
+        self.menu_1.add_cascade(label="Graphs", menu=self.Graphs)
+        self.Graphs.add_command(label="Show Graphs", command=lambda: graphs.graphs(email))
+
+
+
+
+
+
         self.root.mainloop()
 
 # demo()
