@@ -31,7 +31,7 @@ class graphs:
             if resultFinal[0] != None:
                 name.append(i)
                 values.append(resultFinal[0])
-        print(name, values)
+
 
         y = np.array(values)
         mylabels = name
@@ -78,7 +78,7 @@ class graphs:
                 d['Nov'] += result1[i][1]
             elif d1[1] == '12':
                 d['Dec'] += result1[i][1]
-        print(d)
+
         name1 = []
         value1 = []
         for i in d.keys():
@@ -86,7 +86,7 @@ class graphs:
             value1.append(d[i])
         x = np.array(name1)
         y = np.array(value1)
-        print(x, y)
+
 
         fig = plt.figure(figsize=(6, 6), dpi=100)
         fig.set_size_inches(6, 4)

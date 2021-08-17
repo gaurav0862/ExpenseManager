@@ -1,4 +1,4 @@
-import time
+
 from tkinter import *
 from tkinter.messagebox import *
 from pymysql import *
@@ -30,7 +30,6 @@ class login:
 
         self.emailID = Entry(self.root)
         self.emailID.place(x=250, y=125)
-        # self.lab_2 = Label(text="EN TER PASSWORD : ").place(x=125,y=170)
         self.canvas1.create_text(192, 180, text="ENTER PASSWORD : ")
         self.password = Entry(self.root, show='*')
         self.password.place(x=250, y=170)

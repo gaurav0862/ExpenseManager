@@ -1,20 +1,10 @@
 from tkinter import *
 from tkinter import ttk
-import numpy as np
-import matplotlib.pyplot as plt
-
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from PIL import Image,ImageTk
-from tkinter.messagebox import *
-from tkinter.ttk import Combobox, Treeview
-from pymysql import *
 
 import Addexpence
-import Addtransection
 import ViewBudget
-import category
 import changepassword
-import viewcategory
 import AddIncome
 import viewincome
 import Viewexpence
@@ -52,7 +42,6 @@ class demo:
         self.admin = Menu(self.menu_1, tearoff=0)
         self.menu_1.add_cascade(label="Profile", menu=self.admin)
         self.admin.add_command(label="Change Password", command=lambda: changepassword.change(self.email))
-        # self.admin.add_command(label="", command=lambda: "")
         self.admin.add_command(label="Logout", command= lambda : self.root.destroy())
 
 
@@ -71,9 +60,8 @@ class demo:
         self.Budget.add_command(label="Add Budget", command=lambda: Budget.add(email))
         self.Budget.add_command(label="View Budget", command=lambda: ViewBudget.view(email))
 
-        # self.Graphs = Menu(self.menu_1, tearoff=0)
+
         self.menu_1.add_command(label="Graphs", command=lambda: graphs.graphs(email))
-        # self.Graphs.add_command(label="Show Graphs", )
 
 
 
