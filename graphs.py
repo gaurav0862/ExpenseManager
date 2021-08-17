@@ -12,6 +12,7 @@ class graphs:
     def __init__(self,email):
 
         self.top = Toplevel()
+        self.top.configure(bg='#03f4fc')
         Label(self.top,text='Category Wise Expenses',font=("Constantia", "25", "italic", 'bold')).place(x=150,y=50)
         Label(self.top,text='Month Wise Expenses',font=("Constantia", "25", "italic", 'bold')).place(x=850,y=50)
         self.top.geometry('1366x680+0+0')

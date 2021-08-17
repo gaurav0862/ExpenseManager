@@ -56,21 +56,24 @@ class demo:
         self.admin.add_command(label="Logout", command= lambda : self.root.destroy())
 
 
-        self.transection = Menu(self.menu_1, tearoff=0)
-        self.menu_1.add_cascade(label="Transection", menu=self.transection)
-        self.transection.add_command(label="Add Income", command=lambda: AddIncome.income(email))
-        self.transection.add_command(label="View Income", command=lambda: viewincome.income(email))
-        self.transection.add_command(label="Add Expence", command=lambda: Addexpence.expence(email))
-        self.transection.add_command(label="View Expence", command=lambda: Viewexpence.expence(email))
+        self.Income = Menu(self.menu_1, tearoff=0)
+        self.menu_1.add_cascade(label="Income", menu=self.Income)
+        self.Income.add_command(label="Add Income", command=lambda: AddIncome.income(email))
+        self.Income.add_command(label="View Income", command=lambda: viewincome.income(email))
+
+        self.Expenses = Menu(self.menu_1, tearoff=0)
+        self.menu_1.add_cascade(label="Expence", menu=self.Expenses)
+        self.Expenses.add_command(label="Add Expence", command=lambda: Addexpence.expence(email))
+        self.Expenses.add_command(label="View Expence", command=lambda: Viewexpence.expence(email))
 
         self.Budget = Menu(self.menu_1, tearoff=0)
         self.menu_1.add_cascade(label="Budget", menu=self.Budget)
         self.Budget.add_command(label="Add Budget", command=lambda: Budget.add(email))
         self.Budget.add_command(label="View Budget", command=lambda: ViewBudget.view(email))
 
-        self.Graphs = Menu(self.menu_1, tearoff=0)
-        self.menu_1.add_cascade(label="Graphs", menu=self.Graphs)
-        self.Graphs.add_command(label="Show Graphs", command=lambda: graphs.graphs(email))
+        # self.Graphs = Menu(self.menu_1, tearoff=0)
+        self.menu_1.add_command(label="Graphs", command=lambda: graphs.graphs(email))
+        # self.Graphs.add_command(label="Show Graphs", )
 
 
 
